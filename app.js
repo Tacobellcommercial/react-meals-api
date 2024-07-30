@@ -14,7 +14,6 @@ app.use(cors({
 
 app.use(express.json());
 
-
 const User = require("./models/User");
 
 mongoose.connect("mongodb+srv://tacobellcommercial:" + process.env.PASSWORD + "@cluster0.1kx4ukd.mongodb.net/");
@@ -34,6 +33,7 @@ app.post("/create-user", async (req, res)=>{
 
         await newUser.save();
         res.json({message: "User created successfully"});
+        console.log("User send...");
     }else{
         res.json({message: "User already exists"});
     }
