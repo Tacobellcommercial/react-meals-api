@@ -9,7 +9,7 @@ const bcrypt = require("bcrypt");
 const app = express();
 
 app.use(cors({
-    origin: "https://react-meals-a9vf.onrender.com/"
+    origin: "https://react-meals-a9vf.onrender.com"
 }))
 
 app.use(express.json());
