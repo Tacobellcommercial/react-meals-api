@@ -9,7 +9,7 @@ const bcrypt = require("bcrypt");
 const app = express();
 
 app.use(cors({
-    origin: "http://localhost:3000"
+    origin: "https://react-meals-a9vf.onrender.com/"
 }))
 
 app.use(express.json());
@@ -90,6 +90,6 @@ app.post("/remove-item-from-cart", authenticateTokenAndGetUser, async (req, res)
 })
 
 
-app.listen(3001, (req, res)=>{
+app.listen(process.env.PORT, (req, res)=>{
     console.log("Listening on port 3001...");
 })
